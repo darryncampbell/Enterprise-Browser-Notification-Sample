@@ -1,0 +1,46 @@
+<HTML>
+    <HEAD>
+        <script>
+            function doRefresh()
+            {
+                location.reload();
+            }
+            function doVibrate() {
+                EB.Notification.vibrate(2000);
+            }
+            function doDefaultBeep() {
+                EB.Notification.beep({}, null);
+            }
+            function doHighBeep() {
+                EB.Notification.beep({'frequency': 10000, 'volume': 3, 'duration': 2000}, null);
+            }
+            function doPlayMP3()
+            {
+                EB.Mediaplayer.start('file:///sdcard/media/claps.mp3');
+            }
+            function doPlayWAV()
+            {
+                EB.Mediaplayer.start('file:///sdcard/media/guitar.wav');
+            }
+        </script>
+    </HEAD>
+<BODY>
+
+
+<H1>
+    Notification
+</H1>
+<H2>
+<P>
+    <a href="javascript:doRefresh();">Refresh Page</a> | 
+    <br><br>
+    <a href="javascript:doVibrate();">Vibrate</a> | 
+    <a href="javascript:doDefaultBeep();">Beep (Default)</a> | 
+    <a href="javascript:doHighBeep();">Beep (High Pitch)</a> | 
+    <br><br>
+    <a href="javascript:doPlayMP3();">Play MP3</a> | 
+    <a href="javascript:doPlayWAV();">Play WAV</a> | 
+</P>
+</H2>
+
+</BODY>
